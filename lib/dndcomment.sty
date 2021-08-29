@@ -1,3 +1,5 @@
+% Modified by InfernalBullfrog Aug 2021
+
 % Green comment box definition
 \newtcolorbox{commentbox}[2][]{
 	frame hidden,
@@ -21,12 +23,3 @@
 	#1
 }
 
-%
-% Old implementation using mdframed
-%
-%\newenvironment{commentbox}[1]
-%{\fontfamily{lmss}\selectfont\begin{mdframed}[frametitle={#1},
-%                                          frametitlefont=\fontfamily{fosj}\selectfont\scshape\bfseries\color{black},
-%                                              linecolor=commentgreen,
-%                                              backgroundcolor=commentgreen]}
-%{\end{mdframed}}
