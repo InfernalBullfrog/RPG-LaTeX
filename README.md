@@ -1,10 +1,10 @@
-# D&D 5e LaTeX Template
+# RPG-LaTeX Collection
 
-This is an attempt at a D&D 5e LaTeX template. The color scheme is close to the original source books, as are the fonts. The fonts chosen are included by default in TeX Live.
+This is a LaTeX class collection for building thematic RPG documents. The original file is based on [anoderay's DND-5E-LaTeX-Template](https://github.com/anoderay/DND-5e-LaTeX-Template)
 
 The template compiles with pdflatex.
 
-![Preview](https://github.com/anoderay/DND-5e-LaTeX-Template/raw/master/scrot.png)
+![Preview](https://github.com/InfernalBullfrog/RPG-LaTeX/raw/master/scrot.png)
 
 
 ### Installation
@@ -12,7 +12,7 @@ The template compiles with pdflatex.
 Just clone the repo. From terminal:
 
 ```sh
-$ git clone https://github.com/anoderay/DND-5e-LaTeX-Template.git 5e-template
+$ git clone https://github.com/InfernalBullfrog/RPG-LaTeX.git 5e-template
 $ cd 5e-template
 $ pdflatex example.tex
 ```
