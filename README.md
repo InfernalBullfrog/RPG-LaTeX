@@ -1,6 +1,26 @@
 # RPG-LaTeX Collection
 
-This is a LaTeX class collection for building thematic RPG documents. The original file is based on [anoderay's DND-5E-LaTeX-Template](https://github.com/anoderay/DND-5e-LaTeX-Template)
+This is a LaTeX class collection for building thematic RPG documents. The 
+original file is based on 
+[anoderay's DND-5E-LaTeX-Template](https://github.com/anoderay/DND-5e-LaTeX-Template).
+
+### Changes made
+ - Would not compile in TeXLive 2021 due to use of a font that TeXLive was
+   not finding. I changed the default font to something suitable.
+ - Made tables more flexible by passing column styles as a parameter.
+ - Added a custom caption for putting titles on tables etc.
+ - Added a spellbox option based on the monsterbox type.
+ - Cleaned up monsterbox to match more thematically with choices so far.
+
+### Plans for the future
+ - Give box types color options
+ - Combine table types into a single package with color options
+ - Add framing options to tables
+ - Generalize themeing to beyond D&D
+ - Change hline definition in monsterbox to something better
+ - Create package options to choose theme (fantasy, scifi, steampunk, etc.)
+ - Make full-width boxes and tables possible
+ - Look into the original to-dos listed below
 
 The template compiles with pdflatex.
 
@@ -26,7 +46,8 @@ sudo apt-get install texlive-full
 ```sh
 sudo pacman -S texlive-bin texlive-core texlive-latexextra
 ```
-It's a bit unclear exactly what subset of features this module needs. As a general rule, we'd recommend installing one of larger ones.
+It's a bit unclear exactly what subset of features this module needs. As a 
+general rule, we'd recommend installing one of larger ones.
 
 ### Package Options
 - bg-letter: Loads a letter-sized background-image
@@ -51,12 +72,12 @@ Per default "bg-letter" and "bg-full" are loaded.
  - Credit for the background image goes to http://lostandtaken.com/
 
 ### Version
-0.5
+2021.1
 
 ### License
 The MIT License (MIT)
 
-Copyright (c) 2016 Evan Bergeron
+Copyright (c) 2016 InfernalBullfrog
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
