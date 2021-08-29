@@ -12,8 +12,8 @@ The template compiles with pdflatex.
 Just clone the repo. From terminal:
 
 ```sh
-$ git clone https://github.com/InfernalBullfrog/RPG-LaTeX.git 5e-template
-$ cd 5e-template
+$ git clone https://github.com/InfernalBullfrog/RPG-LaTeX.git
+$ cd RPG-LaTeX
 $ pdflatex example.tex
 ```
 
