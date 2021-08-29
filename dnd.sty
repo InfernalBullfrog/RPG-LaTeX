@@ -22,6 +22,8 @@
 \RequirePackage{keycommand}
 \RequirePackage{fancyhdr} 			  % Adaptation of the footers
 \RequirePackage[most]{tcolorbox}  % used for some boxes
+\RequirePackage{caption}
+\RequirePackage{float}
 
 % Load other modules of this package
 \usepackage{lib/dndmonster}
@@ -31,7 +33,7 @@
 \usepackage{lib/dndtable}
 \usepackage{lib/dndquote}
 \usepackage{lib/dndpaperbox}
-
+\usepackage{lib/dndspell}
 
 %
 % Options
@@ -90,6 +92,13 @@
 \definecolor{commentgreen}{HTML}{E0E5C1} % e.g. used in table and green commentbox
 \definecolor{itemtablepink}{HTML}{E9CDC2} % e.g. used in item tables instead of the green
 \definecolor{rulered}{HTML}{9C2B1B}		%e.g. used for triangular rule in statsblock
+
+% Setup custom captioning for tables
+\DeclareCaptionFont{capsans}{\fontfamily{LibertinusSans-LF}\selectfont\large
+                             \scshape\bfseries}
+\captionsetup{format=plain,labelformat=empty,justification=raggedright,
+              singlelinecheck=false,font={capsans,stretch=0.0},position=above}
+
 
 % Setup for custom footer
 \pagestyle{fancy}

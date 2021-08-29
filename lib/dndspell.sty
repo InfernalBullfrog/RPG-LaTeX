@@ -1,0 +1,58 @@
+% Modified by InfernalBullfrog Aug 2021
+
+% Spell environment sty file
+
+%new Spellbox
+\newtcolorbox{spellbox}[2][]{
+	enhanced,
+	frame hidden,
+	before skip=7pt plus2pt,
+	boxrule=0pt,
+	breakable,
+	boxsep=0.25ex,
+	toptitle=3mm,
+	left=2.5mm,
+	right=2.15mm,
+	arc=0mm,
+	borderline north={1pt}{0pt}{titlered},
+	borderline south={1pt}{0pt}{titlered},
+	colback=bgtan,
+	colbacktitle=bgtan,
+	colframe=titlered,
+	fonttitle=\scshape\bfseries\color{titlered}\large,
+	fontupper=\fontfamily{lmss}\selectfont,
+	title=#2,
+	after={\vspace{7pt plus 1pt}\noindent},
+	#1
+}
+
+
+% Define Monster subsection header style
+%\newcommand{\monstersection}[1]{\subsubsection*{#1}}
+%\newcommand{\monstersection}[1]{
+%	{\par
+%	\color{titlered}\normalfont\scshape\Large #1 \vspace{3pt}
+%	\titleline{\color{titlered}\titlerule[0.6pt]}
+%	\par\medskip}
+%	}
+
+\newenvironment{spellaction}[1][\unskip]{\emph{\textbf{#1.}}}{\vspace{0.5em}}
+
+%
+% Macros for use within the spell environment
+%
+
+\newkeycommand\requirements[castingtime=,
+                            range=,
+                            components=,
+                            duration=,]{%
+  \ifcommandkey{castingtime}
+    {\textbf{Casting Time} \commandkey{castingtime}\\}{}
+  \ifcommandkey{range}
+    {\textbf{Range} \commandkey{range}\\}{}
+  \ifcommandkey{components}
+    {\textbf{Components} \commandkey{components}\\}{}
+  \ifcommandkey{duration}
+    {\textbf{Duration} \commandkey{duration}\\}{}
+\color{black}
+}
