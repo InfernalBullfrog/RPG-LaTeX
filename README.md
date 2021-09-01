@@ -11,10 +11,10 @@ original file is based on
  - Added a custom caption for putting titles on tables etc.
  - Added a spellbox option based on the monsterbox type.
  - Cleaned up monsterbox to match more thematically with choices so far.
+ - Gave tables color options and removed itemtable
 
 ### Plans for the future
  - Give box types color options
- - Combine table types into a single package with color options
  - Add framing options to tables
  - Generalize themeing to beyond D&D
  - Change hline definition in monsterbox to something better
