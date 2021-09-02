@@ -52,14 +52,14 @@
 \newpage % Acts as columbreak because of twocolumn option; for pagebreak use \clearpage
 
 \subsection{Monsters}
-\begin{monsterbox}{Scaryguy}
+\begin{monsterbox}{Scaryguy}{}{lightivory}
     \textit{Medium humanoid, evil} \\
-    \hline
+    \spotline{basered}
     \basics[armorclass=12, hitpoints=16 (3d8+3), speed=50 ft]
-    \hline
+    \spotline{basered}
     \stats[STR = 12 (+1), DEX = 14 (+2), CON = 13 (+1), 
            INT = 8 (-1),  WIS = 10 (+0), CHA = 7 (-2)]
-    \hline
+    \spotline{basered}
     
     \details[ % If commas are used, enclose descriptions in braces
         skills = Perception +2,
@@ -67,7 +67,7 @@
         languages = {Common, Abyssal},
         challenge = 1/2 (100 xp)
     ]
-    \hline \\[1mm]
+    \spotline{basered}
     
     \begin{monsteraction}[Special Sauce]
         The Scaryguy has advantage on making tasty food.

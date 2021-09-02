@@ -166,13 +166,15 @@
 
 
 
-% Fancy DnD 5e-style hline
-\renewcommand{\hline}{
-\noindent
-  \begin{tikzpicture}[]
-    \draw [rulered, fill=rulered] (0, 0) --(0,0.1) -- (\textwidth, 0.08);
-  \end{tikzpicture}
-}
+% Fancy hline styles
+\newcommand{\spotline}[1]
+    {\noindent
+     \begin{tikzpicture}[]
+     \draw [#1, fill=#1] (0, 0.005) --(0.47\textwidth, 0.03) --(0.5\textwidth, 0.0) --(0.47\textwidth, -0.03) --(0, -0.005) --(0, 0.005);
+     \draw [#1, fill=#1] (0.5\textwidth, 0) circle (0.05);
+     \draw [#1, fill=#1] (0.5\textwidth, 0) --(0.53\textwidth,0.03) --(\textwidth, 0.005) --(\textwidth, -0.005) --(0.53\textwidth,-0.03) --(0.5\textwidth, 0);
+     \end{tikzpicture}
+    }
 
 
 % Either hilariously, or infuriatingly, the \ifcommandkey
