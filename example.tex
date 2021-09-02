@@ -13,15 +13,15 @@
 
 \subsection{Fancy Text}
 \subsubsection{Quote Box}
-\begin{quotebox}
+\begin{quotebox}{lightivory}{darkred}
     \lipsum[2][1-4]
 \end{quotebox}
 
-\begin{paperbox}{Paper Box}
+\begin{paperbox}{Paper Box}{lightyellow}{black}
     \lipsum[3][1-4]
 \end{paperbox}
 
-\begin{commentbox}{Comment Box}
+\begin{commentbox}{Comment Box}{lightgreen}
     \lipsum[4][1-4]
 \end{commentbox}
 
@@ -29,7 +29,7 @@
 
 \begin{table}[h!]
     \caption{Titled Table}
-    \begin{dndtable}{cX}
+    \begin{dndtable}{cX}{lightcyan}
         \textbf{Level} & \textbf{Information} \\
         1st & \textit{Special features 1} \\
         2nd & \textit{Special features 3} \\
@@ -40,13 +40,13 @@
 
 \begin{table}[h!]
     \caption{Item Table}
-    \begin{dnditemtable}{lX}
+    \begin{dndtable}{lX}{lightred}
         \textbf{Cost} & \textbf{Goods} \\
         1 cp & Something cheap \\
         1 sp & Something that costs more \\
         1 gp & Something with value \\
         1000 gp & Something expensive
-    \end{dnditemtable}
+    \end{dndtable}
 \end{table}
 
 \newpage % Acts as columbreak because of twocolumn option; for pagebreak use \clearpage
