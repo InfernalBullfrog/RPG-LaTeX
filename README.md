@@ -12,9 +12,10 @@ original file is based on
  - Added a spellbox option based on the monsterbox type.
  - Cleaned up monsterbox to match more thematically with choices so far.
  - Gave tables color options and removed itemtable
+ - Gave all three box types color options
+ - removed dnd-specific naming from files
 
 ### Plans for the future
- - Give box types color options
  - Add framing options to tables
  - Generalize themeing to beyond D&D
  - Change hline definition in monsterbox to something better

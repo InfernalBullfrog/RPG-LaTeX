@@ -1,10 +1,11 @@
-% DND 5e LaTeX Style File
+% RPG LaTeX Style File
+% Built from DND 5e LaTeX Style File
 % Created by Evan Bergeron
 % Modified by Christopher Liu December 2015
 % Modified by Yannic Meyer Feb 2016
 % Modified by InfernalBullfrog Aug 2021
 
-\ProvidesPackage{dnd}[2021/08/28]
+\ProvidesPackage{rpg}[2021/09/01]
 
 %
 % Prerequisite Packages
@@ -26,13 +27,13 @@
 \RequirePackage{float}
 
 % Load other modules of this package
-\usepackage{lib/dndmonster}
-\usepackage{lib/dndsections}
-\usepackage{lib/dndcomment}
-\usepackage{lib/dndtable}
-\usepackage{lib/dndquote}
-\usepackage{lib/dndpaperbox}
-\usepackage{lib/dndspell}
+\usepackage{lib/rpgmonster}
+\usepackage{lib/rpgsections}
+\usepackage{lib/rpgcomment}
+\usepackage{lib/rpgtable}
+\usepackage{lib/rpgquote}
+\usepackage{lib/rpgpaperbox}
+\usepackage{lib/rpgspell}
 
 %
 % Options
@@ -56,15 +57,15 @@
   % Determine background image
   \iftoggle{bool-bg-a4}{%		% Check if A4 option is selected
     \iftoggle{bool-bg-print}{%	% Check if print option is selected
-      \RequirePackage[a4,print]{lib/dndbackgroundimg}
+      \RequirePackage[a4,print]{lib/rpgbackgroundimg}
 		}{%
-      \RequirePackage[a4,full]{lib/dndbackgroundimg}
+      \RequirePackage[a4,full]{lib/rpgbackgroundimg}
 		}
 	}{%
     \iftoggle{bool-bg-print}{%	% Check if print option is selected
-      \RequirePackage[letter,print]{lib/dndbackgroundimg}
+      \RequirePackage[letter,print]{lib/rpgbackgroundimg}
 		}{%
-      \RequirePackage[letter,full]{lib/dndbackgroundimg}
+      \RequirePackage[letter,full]{lib/rpgbackgroundimg}
 		}
 	}
 }
