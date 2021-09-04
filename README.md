@@ -11,14 +11,15 @@ original file is based on
  - Added a custom caption for putting titles on tables etc.
  - Added a spellbox option based on the monsterbox type.
  - Cleaned up monsterbox to match more thematically with choices so far.
- - Gave tables color options and removed itemtable
- - Gave all three box types color options
- - removed dnd-specific naming from files
-
+ - Gave tables color options and removed itemtable.
+ - Gave all three box types color options.
+ - Removed dnd-specific naming from files.
+ - Original quotebox style just wasn't satisfying; I made it better.
+ - Built two better hline options for monsterbox or anywhere desired with color options.
+ 
 ### Plans for the future
  - Add framing options to tables
  - Generalize themeing to beyond D&D
- - Change hline definition in monsterbox to something better
  - Create package options to choose theme (fantasy, scifi, steampunk, etc.)
  - Make full-width boxes and tables possible
  - Look into the original to-dos listed below

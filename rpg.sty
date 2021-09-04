@@ -176,15 +176,15 @@
      \end{tikzpicture}
     }
 
-\newcommand{\doublevline}[1]
+\newcommand{\doublevline}[2]
     {\noindent
      \begin{tikzpicture}[]
      \draw [#1, ultra thick] (0, 0) .. controls (0.45\textwidth, 0) .. (0.5\textwidth, -0.08);
      \draw [#1, ultra thick] (\textwidth, 0) .. controls (0.55\textwidth, 0) .. (0.5\textwidth, -0.08);
      \draw [#1, fill=#1] (0, 0) circle (0.05);
      \draw [#1, fill=#1] (\textwidth, 0) circle (0.05);
-     \draw [#1, thick] (0.03\textwidth, -0.06) .. controls (0.45\textwidth, -0.06) .. (0.5\textwidth, -0.14);
-     \draw [#1, thick] (0.97\textwidth, -0.06) .. controls (0.55\textwidth, -0.06) .. (0.5\textwidth, -0.14);
+     \draw [#2, thick] (0.03\textwidth, -0.06) .. controls (0.45\textwidth, -0.06) .. (0.5\textwidth, -0.14);
+     \draw [#2, thick] (0.97\textwidth, -0.06) .. controls (0.55\textwidth, -0.06) .. (0.5\textwidth, -0.14);
      \end{tikzpicture}
     }
 
