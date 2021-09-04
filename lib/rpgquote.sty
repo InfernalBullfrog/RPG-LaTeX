@@ -1,22 +1,23 @@
-% Modified by InfernalBullfrog Aug 2021
+% Modified by InfernalBullfrog Sep 2021
 
-\newtcolorbox{quotebox}[3][]{enhanced jigsaw,frame hidden,boxrule=0pt,
-	breakable,
-	enhanced,
-	before skip=10pt plus 1pt,
-	boxsep=0.25ex,
-	left=8pt,
-	right=8pt,
-	colback=#2,
-	colframe=#2,
-	arc=0mm,
-	parbox = false,
-	borderline west={1pt}{-0.5pt}{#3},
-	borderline east={1pt}{-0.5pt}{#3},
-	fontupper = \fontfamily{lmss}\selectfont,
-	overlay={
-		\foreach \n in {north east,north west,south east,south west}
-		{\draw [#3, fill=#3] (frame.\n) circle (2pt); }; },
-	after={\vspace{7.5pt plus 1pt}\noindent},
-	#1
+\newtcolorbox{quotebox}[3][]{
+    boxrule=0pt,
+    breakable,
+    enhanced,
+    before skip=8pt plus 1pt,
+    boxsep=0.25ex,
+    left=8pt,
+    right=8pt,
+    arc=2mm,
+    parbox=false,
+    colback =#2,
+    colframe=#3,
+    toprule=0mm,
+    bottomrule=0mm,
+    leftrule=1mm,
+    rightrule=1mm,
+    fontupper=\fontfamily{lmss}\selectfont,
+    after={\vspace{7.5pt plus 1pt}\noindent},
+    #1
 }
+
