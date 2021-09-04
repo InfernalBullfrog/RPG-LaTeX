@@ -1,0 +1,29 @@
+% Created by InfernalBullfrog Aug 2021
+
+% Title box definition
+\newtcolorbox{titlebox}[3][]{
+    float*=t,
+	frame hidden,
+	boxrule=0pt,
+	breakable,
+	enhanced,
+    width=\paperwidth,
+    height=\paperheight,
+	before skip=0pt,
+	toptitle=3mm,
+	boxsep=0.25ex,
+	left=8pt,
+	right=8pt,
+	arc=0mm,
+    fonttitle=\fontfamily{yrd}\selectfont\huge\bfseries\color{white},
+	fontupper=\fontfamily{lmss}\selectfont,
+    halign title=center,
+	title=#2,
+	parbox = false,
+	colback=#3,
+	colframe=#3,
+	colbacktitle=#3,
+    after={0pt\noindent\newpage},
+	#1
+}
+

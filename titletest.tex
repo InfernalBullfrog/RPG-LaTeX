@@ -1,0 +1,108 @@
+\documentclass[10pt,twoside,twocolumn]{article}
+\usepackage[bg-print]{rpg} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage[utf8]{inputenc}
+
+% Start document
+\begin{document}
+\fontfamily{ppl}\selectfont % Set text font
+
+\rpgtitlepage{CATCHY ADVENTURE NAME}{black}
+
+% Your content goes here
+\twocolumn[
+    \begin{@twocolumnfalse}
+    \section{Basic Text}
+    \end{@twocolumnfalse}
+]
+\lipsum[1][1-5]
+
+\subsection{Fancy Text}
+\subsubsection{Quote Box}
+\begin{quotebox}{lightivory}{darkred}
+    \lipsum[2][1-4]
+\end{quotebox}
+
+\begin{paperbox}{Paper Box}{lightyellow}{black}
+    \lipsum[3][1-4]
+\end{paperbox}
+
+\begin{commentbox}{Comment Box}{lightgreen}
+    \lipsum[4][1-4]
+\end{commentbox}
+
+\subsection{Tables}
+
+\begin{table}[h!]
+    \caption{Titled Table}
+    \begin{rpgtable}{cX}{lightcyan}
+        \textbf{Level} & \textbf{Information} \\
+        1st & \textit{Special features 1} \\
+        2nd & \textit{Special features 3} \\
+        3rd & \textit{Special features 5} \\
+        4th & \textit{Special features 7}
+    \end{rpgtable}
+\end{table}
+
+\begin{table}[h!]
+    \caption{Item Table}
+    \begin{rpgtable}{lX}{lightred}
+        \textbf{Cost} & \textbf{Goods} \\
+        1 cp & Something cheap \\
+        1 sp & Something that costs more \\
+        1 gp & Something with value \\
+        1000 gp & Something expensive
+    \end{rpgtable}
+\end{table}
+
+\newpage % Acts as columbreak because of twocolumn option; for pagebreak use \clearpage
+
+\subsection{Monsters}
+\begin{monsterbox}{Scaryguy}{}
+    \textit{Medium humanoid, evil} \\
+    \spotline{basered}
+    \basics[armorclass=12, hitpoints=16 (3d8+3), speed=50 ft]
+    \doublevline{basered}{baseyellow}
+    \stats[STR = 12 (+1), DEX = 14 (+2), CON = 13 (+1), 
+           INT = 8 (-1),  WIS = 10 (+0), CHA = 7 (-2)]
+    \spotline{basered}
+    
+    \details[ % If commas are used, enclose descriptions in braces
+        skills = Perception +2,
+        savingthrows = Dex +4,
+        languages = {Common, Abyssal},
+        challenge = 1/2 (100 xp)
+    ]
+    \spotline{basered}
+    
+    \begin{monsteraction}[Special Sauce]
+        The Scaryguy has advantage on making tasty food.
+    \end{monsteraction}
+
+    \monstersection{Actions}
+    \begin{monsteraction}[Shortsword]
+        \textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target.\\
+        \textit{Hit:} 4 (1d4 + 2) piercing damage
+    \end{monsteraction}
+\end{monsterbox}
+
+\subsection{Spells}
+\begin{spellbox}{Finger of Death}
+    \textit{1st-level evocation}\\
+    \requirements[ % If commas are used, enclose descriptions in braces
+        castingtime=1 action,
+        range=Touch,
+        components={V, S},
+        duration=Instantaneous
+    ]
+    
+    You are the master of life and death. A creature you touch instantly
+    takes 1d20 damage.
+
+    \begin{spellaction}[At Higher Levels]
+        When you cast this spell at higher levels, the damage increases by
+        1d20 for each slot level above 1st.
+    \end{spellaction}
+\end{spellbox}
+
+% End document
+\end{document}

@@ -34,6 +34,7 @@
 \usepackage{lib/rpgquote}
 \usepackage{lib/rpgpaperbox}
 \usepackage{lib/rpgspell}
+\usepackage{lib/rpgtitle}
 
 %
 % Options
@@ -133,6 +134,7 @@
 \definecolor{lightcyan}{HTML}{789C9C}
 \definecolor{darkcyan}{HTML}{075F5F}
 
+
 % Setup custom captioning for tables
 \DeclareCaptionFont{capsans}{\fontfamily{LibertinusSans-LF}\selectfont\large
                              \scshape\bfseries}
@@ -165,7 +167,6 @@
 	}
 
 
-
 % Fancy hline styles
 \newcommand{\spotline}[1]
     {\noindent
@@ -187,6 +188,14 @@
      \draw [#2, thick] (0.97\textwidth, -0.06) .. controls (0.55\textwidth, -0.06) .. (0.5\textwidth, -0.14);
      \end{tikzpicture}
     }
+    
+
+% Custom titlepage
+\newcommand{\rpgtitlepage}[2]{
+    \begin{titlebox}{#1}{#2}
+        \spotline{basered}
+    \end{titlebox}
+}
 
 
 % Either hilariously, or infuriatingly, the \ifcommandkey
