@@ -13,7 +13,7 @@
 
 \RequirePackage{titlesec}         % Used to adjust (sub)section colors and fonts
 \RequirePackage{lipsum}           % Filler text
-\RequirePackage[cm]{fullpage}     % Small margins
+%\RequirePackage[cm]{fullpage}     % Small margins
 \RequirePackage{bookman}          % Closest built-in font I could find
 \RequirePackage[T1]{fontenc}
 \RequirePackage[table]{xcolor}
@@ -25,6 +25,7 @@
 \RequirePackage[most]{tcolorbox}  % used for some boxes
 \RequirePackage{caption}
 \RequirePackage{float}
+\RequirePackage[margin=1.5cm]{geometry}
 
 % Load other modules of this package
 \usepackage{lib/rpgmonster}
@@ -192,8 +193,10 @@
 
 % Custom titlepage
 \newcommand{\rpgtitlepage}[2]{
+    \newgeometry{top=0cm}
     \begin{titlebox}{#1}{#2}
-        \spotline{basered}
+%        \newgeometry{left=4.5cm,right=4.5cm}
+        \spotline{red}
     \end{titlebox}
 }
 
