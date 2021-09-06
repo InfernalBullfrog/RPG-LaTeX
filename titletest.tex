@@ -7,7 +7,11 @@
 \fontfamily{ppl}\selectfont % Set text font
 
 \begin{titlepage}
-    \rpgtitlepage{{\color{red} RPG}\\CATCHY ADVENTURE NAME}{black}
+    \rpgtitlepage{{\color{red} RPG}\\CATCHY ADVENTURE NAME} % Title
+                 {black} % Background color
+                 {img/generic-cover-image.jpg} % Path to cover art
+                 {\color{white} COVER TEXT HERE} % Subtitle or other cover text
+                 {\color{white} \large Written by InfernalBullfrog} % Author
 \end{titlepage}
 
 % Your content goes here
@@ -61,12 +65,12 @@
 \subsection{Monsters}
 \begin{monsterbox}{Scaryguy}{}
     \textit{Medium humanoid, evil} \\
-    \spotline{basered}
+    \wedgeline{basered}
     \basics[armorclass=12, hitpoints=16 (3d8+3), speed=50 ft]
     \doublevline{basered}{baseyellow}
     \stats[STR = 12 (+1), DEX = 14 (+2), CON = 13 (+1), 
            INT = 8 (-1),  WIS = 10 (+0), CHA = 7 (-2)]
-    \spotline{basered}
+    \diamondline{basered}
     
     \details[ % If commas are used, enclose descriptions in braces
         skills = Perception +2,
@@ -105,6 +109,18 @@
         1d20 for each slot level above 1st.
     \end{spellaction}
 \end{spellbox}
+
+\newpage \clearpage
+
+\twocolumn[
+    \begin{@twocolumnfalse}
+    \section{Long Section Title Spanning Both Columns}
+    \end{@twocolumnfalse}
+]
+\lipsum[1-2]
+
+\subsection{Subsection Text}
+\lipsum[3-10]
 
 % End document
 \end{document}
