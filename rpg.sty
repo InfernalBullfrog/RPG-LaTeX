@@ -24,7 +24,9 @@
 \RequirePackage[most]{tcolorbox}  % used for some boxes
 \RequirePackage{caption}
 \RequirePackage{float}
+\RequirePackage{multicol}
 \RequirePackage[margin=1.5cm, bottom=1.7cm]{geometry}
+\RequirePackage[pagecolor=none]{pagecolor}
 
 % Load other modules of this package
 \usepackage{lib/rpgmonster}
@@ -205,22 +207,24 @@
 
 % Custom titlepage
 \newcommand{\rpgtitlepage}[5]{
-    \newgeometry{top=0cm}
-    \begin{titlebox}{#1}{#2}
-        \diamondline{red}
+    \newgeometry{margin=1cm}
+    \newpagecolor{#2}
+    \begin{centering}
+        {\fontfamily{yrd}\fontsize{32}{38}\selectfont\bfseries #1}
 
-        \tcblower
+        \diamondline{red}
+        
         \includegraphics[width=\textwidth]{#3}
         
-        \begin{centering}
-            \vspace{1cm}
-            #4
+        \vspace{1cm}
+        {\fontfamily{ppl}\selectfont\Huge #4}
 
-            \vspace{3cm}
-            #5
-        \end{centering}
-
-    \end{titlebox}
+        \vspace{3cm}
+        {\fontfamily{ppl}\selectfont\Huge #5}
+            
+        
+    \end{centering}
+    \afterpage{\restorepagecolor}
 }
 
 

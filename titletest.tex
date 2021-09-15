@@ -1,10 +1,10 @@
-\documentclass[10pt,twoside,twocolumn]{article}
+\documentclass[10pt,twoside,twocolumn]{book}
 \usepackage[bg-print]{rpg} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
 \usepackage[utf8]{inputenc}
 
 % Start document
 \begin{document}
-\fontfamily{ppl}\selectfont % Set text font
+\fontfamily{T1LibreBskvl-LF}\selectfont % Set text font
 
 \begin{titlepage}
     \rpgtitlepage{{\color{red} RPG}\\CATCHY ADVENTURE NAME} % Title
@@ -22,12 +22,13 @@
 % Your content goes here
 \twocolumn[
     \begin{@twocolumnfalse}
-    \section{Basic Text}
+    \chapter{Basic Text}
+    \thispagestyle{fancy}
     \end{@twocolumnfalse}
 ]
 \lipsum[1][1-5]
 
-\subsection{Fancy Text}
+\section{Fancy Text}
 \subsubsection{Quote Box}
 \begin{quotebox}{lightivory}{darkred}
     \lipsum[2][1-4]
@@ -41,7 +42,8 @@
     \lipsum[4][1-4]
 \end{commentbox}
 
-\subsection{Tables}
+\section{Tables}
+\subsection{Basic Tables}
 
 \begin{table}[h!]
     \caption{Titled Table}
