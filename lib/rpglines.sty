@@ -2,38 +2,45 @@
 
 % Fancy hline styles
 
-\newcommand{\spotline}[1]
+\newlength{\linelength}
+\setlength{\linelength}{\textwidth}
+
+\newcommand{\spotline}[2][\textwidth]
     {\noindent
+     \setlength{\linelength}{#1}
      \begin{tikzpicture}[]
-         \draw [#1, fill=#1] (0, 0.005) -- (0.47\textwidth, 0.03) -- (0.5\textwidth, 0.0) -- (0.47\textwidth, -0.03) -- (0,-0.005) -- cycle;
-         \draw [#1, fill=#1] (0.5\textwidth, 0) circle(0.05);
-         \draw [#1, fill=#1] (0.5\textwidth, 0) -- (0.53\textwidth, 0.03) -- (\textwidth, 0.005) -- (\textwidth, -0.005) -- (0.53\textwidth, -0.03) -- cycle;
+         \draw [#2, fill=#2] (0, 0.005) -- (0.47\linelength, 0.03) -- (0.5\linelength, 0.0) -- (0.47\linelength, -0.03) -- (0,-0.005) -- cycle;
+         \draw [#2, fill=#2] (0.5\linelength, 0) circle(0.05);
+         \draw [#2, fill=#2] (0.5\linelength, 0) -- (0.53\linelength, 0.03) -- (\linelength, 0.005) -- (\linelength, -0.005) -- (0.53\linelength, -0.03) -- cycle;
      \end{tikzpicture}
     }
 
-\newcommand{\doublevline}[2]
+\newcommand{\doublevline}[3]
     {\noindent
+     \setlength{\linelength}{#1}
      \begin{tikzpicture}[]
-         \draw [#1, ultra thick] (0, 0) .. controls (0.45\textwidth, 0) .. (0.5\textwidth, -0.08);
-         \draw [#1, ultra thick] (\textwidth, 0) .. controls (0.55\textwidth, 0) .. (0.5\textwidth, -0.08);
-         \draw [#1, fill=#1] (0,0) circle (0.05);
-         \draw [#1, fill=#1] (\textwidth, 0) circle (0.05);
-         \draw [#2, thick] (0.03\textwidth, -0.06) .. controls (0.45\textwidth, -0.06) .. (0.5\textwidth, -0.14);
-         \draw [#2, thick] (0.98\textwidth, -0.06) .. controls (0.55\textwidth, -0.06) .. (0.5\textwidth, -0.14);
+         \draw [#2, ultra thick] (0, 0) .. controls (0.45\linelength, 0) .. (0.5\linelength, -0.08);
+         \draw [#2, ultra thick] (\linelength, 0) .. controls (0.55\linelength, 0) .. (0.5\linelength, -0.08);
+         \draw [#2, fill=#2] (0,0) circle (0.05);
+         \draw [#2, fill=#2] (\linelength, 0) circle (0.05);
+         \draw [#3, thick] (0.03\linelength, -0.06) .. controls (0.45\linelength, -0.06) .. (0.5\linelength, -0.14);
+         \draw [#3, thick] (0.98\linelength, -0.06) .. controls (0.55\linelength, -0.06) .. (0.5\linelength, -0.14);
      \end{tikzpicture}
     }
 
-\newcommand{\diamondline}[1]
+\newcommand{\diamondline}[2][\textwidth]
     {\noindent
+     \setlength{\linelength}{#1}
      \begin{tikzpicture}[]
-         \draw [#1, fill=#1] (0, 0.005) -- (0.5\textwidth, 0.05) -- (\textwidth, 0.005) -- (\textwidth, -0.005) -- (0.5\textwidth, -0.05) -- (0, -0.005) -- cycle;
+         \draw [#2, fill=#2] (0, 0.005) -- (0.5\linelength, 0.05) -- (\linelength, 0.005) -- (\linelength, -0.005) -- (0.5\linelength, -0.05) -- (0, -0.005) -- cycle;
      \end{tikzpicture}
     }
 
-\newcommand{\wedgeline}[1]
+\newcommand{\wedgeline}[2]
     {\noindent
+     \setlength{\linelength}{#1}
      \begin{tikzpicture}[]
-         \draw [#1, fill=#1] (0, 0) -- (0, 0.1) -- (\textwidth, 0.08) -- cycle;
+         \draw [#2, fill=#2] (0, 0) -- (0, 0.1) -- (\linelength, 0.08) -- cycle;
      \end{tikzpicture}
     }
 

@@ -5,7 +5,7 @@
 % Modified by Yannic Meyer Feb 2016
 % Modified by InfernalBullfrog Aug 2021
 
-\ProvidesPackage{rpg}[2021/09/01]
+\ProvidesPackage{rpg}[2021/09/19]
 
 %
 % Prerequisite Packages
@@ -27,6 +27,7 @@
 \RequirePackage{multicol}
 \RequirePackage[margin=1.5cm, bottom=1.7cm]{geometry}
 \RequirePackage[pagecolor=none]{pagecolor}
+\RequirePackage{color}
 
 % Load other modules of this package
 \usepackage{lib/rpgmonster}
@@ -85,7 +86,6 @@
 \setlength{\columnsep}{1cm}
 
 % Define colors, sampled from the books.
-\usepackage{color}
 \definecolor{bgtan}{HTML}{F7F2E5}		% e.g. used for background and quotebox
 \definecolor{titlered}{HTML}{58180D}	% e.g. used for titles
 \definecolor{undergold}{HTML}{C9AD6A}	% e.g. used for titlerules
@@ -97,45 +97,84 @@
 \definecolor{itemtablepink}{HTML}{E9CDC2} % e.g. used in item tables instead of the green
 \definecolor{rulered}{HTML}{9C2B1B}		%e.g. used for triangular rule in statsblock
 
+% Custom color pallette 337E7
 \definecolor{basered}{HTML}{894639}
 \definecolor{lightred}{HTML}{CD9C93}
+\definecolor{palered}{HTML}{FFEAE6}
 \definecolor{darkred}{HTML}{58190D}
+\definecolor{shadered}{HTML}{220500}
+
 \definecolor{baseyellow}{HTML}{897939}
 \definecolor{lightyellow}{HTML}{CDC193}
+\definecolor{paleyellow{HTML}{FFFAE6}
 \definecolor{darkyellow}{HTML}{58490D}
+\definecolor{shadeyellow}{HTML}{221B00}
+
 \definecolor{baseindigo}{HTML}{372E5F}
 \definecolor{lightindigo}{HTML}{716B8E}
+\definecolor{paleindigo}{HTML}{ADAABA}
 \definecolor{darkindigo}{HTML}{170F3D}
+\definecolor{shadeindigo}{HTML}{050217}
+
 \definecolor{basegreen}{HTML}{2A643E}
 \definecolor{lightgreen}{HTML}{6C967A}
+\definecolor{palegreen}{HTML}{B1C3B7}
 \definecolor{darkgreen}{HTML}{0A401C}
+\definecolor{shadegreen}{HTML}{001908}
+
 \definecolor{basebrown}{HTML}{896B39}
 \definecolor{lightbrown}{HTML}{CDB793}
+\definecolor{palebrown}{HTML}{FFF6E6}
 \definecolor{darkbrown}{HTML}{583B0D}
+\definecolor{shadebrown}{HTML}{221500}
+
 \definecolor{baseolive}{HTML}{7D8638}
 \definecolor{lightolive}{HTML}{C1C890}
+\definecolor{paleolive}{HTML}{F7FAE2}
 \definecolor{darkolive}{HTML}{4D560D}
+\definecolor{shadeolive}{HTML}{1D2100}
+
 \definecolor{basepurple}{HTML}{52275A}
 \definecolor{lightpurple}{HTML}{816287}
+\definecolor{palepurple}{HTML}{B0A2B3}
 \definecolor{darkpurple}{HTML}{330A3A}
+\definecolor{shadepurple}{HTML}{130016}
+
 \definecolor{baseblue}{HTML}{2A3F5A}
 \definecolor{lightblue}{HTML}{647386}
+\definecolor{paleblue}{HTML}{A3AAB3}
 \definecolor{darkblue}{HTML}{0D203A}
+\definecolor{shadeblue}{HTML}{010A16}
+
 \definecolor{baseorange}{HTML}{895639}
 \definecolor{lightorange}{HTML}{CDA893}
+\definecolor{paleorange}{HTML}{FFEFE6}
 \definecolor{darkorange}{HTML}{58280D}
+\definecolor{shadeorange}{HTML}{220C00}
+
 \definecolor{baseivory}{HTML}{C1B492}
 \definecolor{lightivory}{HTML}{F7F2E5}
+\definecolor{paleivory}{HTML}{FFF9EA}
 \definecolor{darkivory}{HTML}{A18337}
+\definecolor{shadeivory}{HTML}{634803}
+
 \definecolor{baseviolet}{HTML}{3E2C5D}
 \definecolor{lightviolet}{HTML}{75688C}
+\definecolor{paleviolet}{HTML}{ADA8B8}
 \definecolor{darkviolet}{HTML}{1E0E3C}
+\definecolor{shadeviolet}{HTML}{090117}
+
 \definecolor{baseturquoise}{HTML}{265A4B}
 \definecolor{lightturquoise}{HTML}{61867C}
+\definecolor{paleturquoise}{HTML}{A2B3AE}
 \definecolor{darkturquoise}{HTML}{093A2C}
+\definecolor{shadeturquoise}{HTML}{001610}
+
 \definecolor{basecyan}{HTML}{267A7A}
 \definecolor{lightcyan}{HTML}{789C9C}
+\definecolor{palecyan}{HTML}{CBD7D7}
 \definecolor{darkcyan}{HTML}{075F5F}
+\definecolor{shadecyan}{HTML}{003D3D}
 
 
 % Setup custom captioning for tables
@@ -171,22 +210,26 @@
 
 
 % Custom titlepage
-\newcommand{\rpgtitlepage}[5]{
+\newcommand{\rpgtitlepage}[6][black]{
     \newgeometry{margin=1cm}
     \NoBgThispage
-    \newpagecolor{#2}
+    \newpagecolor{#1}
     \begin{centering}
-        {\fontfamily{yrd}\fontsize{32}{42}\selectfont\bfseries #1}
+        {\fontfamily{yrd}\fontsize{32}{42}\selectfont\bfseries #2}
 
-        \diamondline{red}
-        
-        \includegraphics[width=\textwidth]{#3}
+        \vspace{0.5cm}
+        {\fontfamily{yrd}\fontsize{32}{42}\selectfont\bfseries #3}
+
+        \diamondline[9cm]{red}
+
+        \vspace{0.5cm}
+        \includegraphics[width=18.5cm]{#4}
         
         \vspace{1cm}
-        {\fontfamily{ppl}\selectfont\Huge #4}
+        {\fontfamily{ppl}\selectfont\Huge #5}
 
         \vfill %\vspace{3cm}
-        {\fontfamily{ppl}\selectfont\Huge #5}
+        {\fontfamily{ppl}\selectfont\large #6}
             
         
     \end{centering}

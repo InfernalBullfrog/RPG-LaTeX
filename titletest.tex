@@ -1,31 +1,32 @@
-\documentclass[10pt,twoside,twocolumn]{book}
+\documentclass[10pt,twoside]{book}
 \usepackage[bg-print]{rpg} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
 \usepackage[utf8]{inputenc}
+\usepackage{balance}
 
 % Start document
 \begin{document}
-\fontfamily{T1LibreBskvl-LF}\selectfont % Set text font
+\fontfamily{LibreBskvl-LF}\selectfont % Set text font
 
 \begin{titlepage}
-    \rpgtitlepage{{\color{red} RPG}\\CATCHY ADVENTURE NAME} % Title
-                 {black} % Background color
-                 {img/generic-cover-image.jpg} % Path to cover art
-                 {\color{white} COVER TEXT HERE} % Subtitle or other cover text
-                 {\color{white} \large Written by InfernalBullfrog} % Author
+    \rpgtitlepage[black] % background color; black is default
+        {\color{red} RPG} % Logo
+        {\color{white} CATCHY ADVENTURE NAME} % Title
+        {img/generic-cover-image.jpg} % Path to cover art
+        {\color{white} COVER TEXT HERE} % Subtitle or other cover text
+        {\color{white} Written by InfernalBullfrog} % Author
 \end{titlepage}
 \newpage \clearpage
+\NoBgThispage
 \thispagestyle{empty}
 \mbox{}
 \newpage \clearpage
 \setcounter{page}{1}
 
 % Your content goes here
-\twocolumn[
-    \begin{@twocolumnfalse}
-    \chapter{Basic Text}
-    \thispagestyle{fancy}
-    \end{@twocolumnfalse}
-]
+\chapter{Basic Text}
+\thispagestyle{fancy}
+
+\begin{multicols}{2}
 \lipsum[1][1-5]
 
 \section{Fancy Text}
@@ -45,27 +46,27 @@
 \section{Tables}
 \subsection{Basic Tables}
 
-\begin{table}[h!]
-    \caption{Titled Table}
-    \begin{rpgtable}{cX}{lightcyan}
-        \textbf{Level} & \textbf{Information} \\
-        1st & \textit{Special features 1} \\
-        2nd & \textit{Special features 3} \\
-        3rd & \textit{Special features 5} \\
-        4th & \textit{Special features 7}
-    \end{rpgtable}
-\end{table}
+\lipsum[5-6]
 
-\begin{table}[h!]
-    \caption{Item Table}
-    \begin{rpgtable}{lX}{lightred}
-        \textbf{Cost} & \textbf{Goods} \\
-        1 cp & Something cheap \\
-        1 sp & Something that costs more \\
-        1 gp & Something with value \\
-        1000 gp & Something expensive
-    \end{rpgtable}
-\end{table}
+\captionof{table}{Titled Table}
+\begin{rpgtable}{cX}{lightcyan}
+    \textbf{Level} & \textbf{Information} \\
+    1st & \textit{Special features 1} \\
+    2nd & \textit{Special features 3} \\
+    3rd & \textit{Special features 5} \\
+    4th & \textit{Special features 7}
+\end{rpgtable}
+
+\lipsum[7-9]
+
+\captionof{table}{Item Table}
+\begin{rpgtable}{lX}{lightred}
+    \textbf{Cost} & \textbf{Goods} \\
+    1 cp & Something cheap \\
+    1 sp & Something that costs more \\
+    1 gp & Something with value \\
+    1000 gp & Something expensive
+\end{rpgtable}
 
 \newpage % Acts as columbreak because of twocolumn option; for pagebreak use \clearpage
 
@@ -119,15 +120,15 @@
 
 \newpage \clearpage
 
-\twocolumn[
-    \begin{@twocolumnfalse}
-    \section{Long Section Title Spanning Both Columns}
-    \end{@twocolumnfalse}
-]
+\end{multicols}
+\section{Long Section Title Spanning Both Columns}
+\begin{multicols}{2}
+
 \lipsum[1-2]
 
 \subsection{Subsection Text}
 \lipsum[3-10]
 
+\end{multicols}
 % End document
 \end{document}
