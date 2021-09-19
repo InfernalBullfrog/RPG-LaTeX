@@ -11,18 +11,23 @@
 
 % Adjust section and subsection colors and font (change 0em to 1em if you 
 % commented the removal of section numbering)
-\titleformat{\chapter}
-{\color{titlered}\normalfont\scshape\Huge}{\thechapter}{0em}{}
-\titlespacing{\chapter}{0pt}{6pt}{10pt}
+\newcommand{\sectioncolor}[2] {
+    \titleformat{\chapter}
+    {\color{#1}\normalfont\scshape\Huge}{\thechapter}{0em}{}
+    \titlespacing{\chapter}{0pt}{6pt}{10pt}
 
-\titleformat{\section}
-{\color{titlered}\normalfont\scshape\LARGE}{\thesection}{0em}{}
-\titlespacing{\section}{0pt}{6pt}{8pt}
+    \titleformat{\section}
+    {\color{#1}\normalfont\scshape\LARGE}{\thesection}{0em}{}
+    \titlespacing{\section}{0pt}{6pt}{8pt}
 
-\titleformat{\subsection}
-{\color{titlered}\normalfont\scshape\Large}{\thesubsection}{0em}{}[{\titleline{\color{undergold}\titlerule[1pt]}}]
-\titlespacing{\subsection}{0pt}{6pt}{6pt}
+    \titleformat{\subsection}
+    {\color{#1}\normalfont\scshape\Large}{\thesubsection}{0em}{}[{\titleline{\color{#2}\titlerule[1pt]}}]
+    \titlespacing{\subsection}{0pt}{6pt}{6pt}
 
-\titleformat{\subsubsection}
-{\color{titlered}\normalfont\scshape\large}{\thesubsubsection}{0em}{}[]
-\titlespacing{\subsubsection}{0pt}{6pt}{6pt}
+    \titleformat{\subsubsection}
+    {\color{#1}\normalfont\scshape\large}{\thesubsubsection}{0em}{}[]
+    \titlespacing{\subsubsection}{0pt}{6pt}{6pt}
+}
+
+\sectioncolor{darkred}{lightyellow}
+
